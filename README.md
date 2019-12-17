@@ -72,3 +72,10 @@ XXXXX
 
 XXXXX
 
+## Ideas for the future:
+
+- Add options to each app by clicking on the icon
+- Add an option to change the background image of the mobile phone
+- Add an option to lock the mobile pone
+- Feature: listen to music in the Spotify App
+- Feature: Add data in a calendar
