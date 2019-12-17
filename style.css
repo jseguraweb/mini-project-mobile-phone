@@ -1,4 +1,14 @@
+/* RESET */
 
+* {
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .fas {
     font-family: 'Font Awesome 5 Free'!;
