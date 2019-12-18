@@ -2,7 +2,7 @@
 
 \* random background image \*
 
-`<i class="fab fa-spotify"></i>`
+`<img src="https://source.unsplash.com/random/500x500 alt="random image">`
 
 play
 
@@ -72,9 +72,9 @@ camera
 
 `<i class="fas fa-camera"></i>`
 
-chrome
+firefox
 
-`<i class="fab fa-chrome"></i>`
+`<i class="fab fa-firefox"></i>`
 
 gallery
 
