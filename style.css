@@ -8,6 +8,7 @@ body {
     width: 100%;
     padding: 1rem 0;
     background-color: rgb(255, 249, 198);
+    position: relative;
 }
 
 /* TYPOGRAPHY */
@@ -48,7 +49,7 @@ html {
     position: relative;
 }
 
-.lock-btn {
+#lock-btn {
     position: absolute;
     right: -10px;
     top: 180px;
@@ -56,7 +57,6 @@ html {
     height: 4rem;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    /* z-index: -2; */
     background-color: rgb(29, 29, 29);
     border: 1px solid #000;
     cursor: pointer;
@@ -71,7 +71,6 @@ html {
     height: 3rem;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    /* z-index: -2; */
     background-color: rgb(29, 29, 29);
     border: 1px solid #000;
     cursor: pointer;
@@ -85,8 +84,8 @@ html {
 
 #top-case {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2.5, 1fr);
+    grid-template-rows: repeat(2, 12.5r);
 }
 
 .speaker {
@@ -124,13 +123,42 @@ html {
     top: 5px;
 }
 
-
-/* DISPLAY */
+/* CAROUSEL */
 
 #display {
     width: 50vh;
     height: 75vh;
-    border: 1px solid #000;
+}
+
+.carousel-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 2px 2px 5px rgb(32, 32, 32);
+    cursor: pointer;
+}
+
+.js-prev {
+    left: 1rem;
+    margin: auto 0;
+}
+
+.js-next {
+    right: 1rem;
+}
+
+/* DISPLAY */
+/* PAGE 1 */
+
+.page-one {
+    width: 50vh;
+    height: 75vh;
     display: grid;
     grid-template-rows: 80% 5% 15%;
     padding: 0.5rem;
@@ -168,12 +196,12 @@ html {
     justify-content: space-evenly;
 }
 
-#top-apps {
+.top-apps {
     display: grid;
     grid-template: repeat(4, calc(100%/4))/repeat(4, calc(100%/4));
 }
 
-#dots-container {
+.dots-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +216,7 @@ html {
     background-color: rgb(37, 37, 37);;
 }
 
-#main-apps {
+.main-apps {
     display: grid;
     grid-template-columns: repeat(5, 20%);
 }
@@ -392,7 +420,6 @@ html {
     width: 90%;
     height: 70%;
     border-radius: 15px;
-    /* border: 1px solid #000; */
     margin: 0.3rem auto 0 auto;
     position: relative;
     box-shadow: 0px 0px 5px rgb(165, 165, 165);
@@ -499,3 +526,23 @@ html {
     font-size: 1.6rem;
 }
 
+/* PAGE 2 */
+
+.page-two {
+    width: 50vh;
+    height: 75vh;
+    display: grid;
+    grid-template-rows: 80% 5% 15%;
+    padding: 0.5rem;
+    background-image: url("https://source.unsplash.com/random");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calendar {
+    grid-column: 1/-1;
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}

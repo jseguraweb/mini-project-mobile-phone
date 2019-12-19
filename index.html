@@ -7,14 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="reset.css">
     <script src="https://kit.fontawesome.com/b1c25c50a2.js" crossorigin="anonymous"></script>
+    <script src="assets/siema-master/docs/assets/siema.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Mobile Phone</title>
 </head>
 
 <body>
+    <button class="carousel-btn js-prev">
+        < </button> <button class="carousel-btn js-next">>
+    </button>
+
     <main id="case">
-        <div class="lock-btn"></div>
+        <div id="lock-btn"></div>
         <div class="volume-up-btn"></div>
         <div class="volume-down-btn"></div>
         <section id="top-case">
@@ -22,76 +27,131 @@
             <p class="brand-name">SAMSUNG</p>
             <div class="cam"></div>
         </section>
-        <section id="display">
-            <article id="top-apps">
-                <div class="app centered clock">
-                    <p>15:21</p>
-                </div>
-                <div class="app weather">
-                    <div class="temperature-container">
-                        <i class="fas fa-cloud-showers-heavy"></i>
-                        <p class="temperature">0°C</p>
+        <section id="display" class="siema mySiema">
+            <section class="page-one">
+                <article class="top-apps">
+                    <div class="app centered clock">
+                        <p>15:21</p>
                     </div>
-                    <p class="city">Berlin</p>
-                </div>
-                <div class="app spotify">
-                    <div class="album-pic"></div>
-                    <div class="title">
-                        <p class="song">Crying Lightning</p>
-                        <p class="band">Arctic Monkeys</p>
+                    <div class="app weather">
+                        <div class="temperature-container">
+                            <i class="fas fa-cloud-showers-heavy"></i>
+                            <p class="temperature">0°C</p>
+                        </div>
+                        <p class="city">Berlin</p>
                     </div>
-                    <div class="back centered"><i class="fas fa-step-backward"></i></div>
-                    <div class="play centered"><i class="fas fa-play"></i></div>
-                    <div class="forward centered"><i class="fas fa-step-forward"></i></div>
+                    <div class="app spotify">
+                        <div class="album-pic"></div>
+                        <div class="title">
+                            <p class="song">Crying Lightning</p>
+                            <p class="band">Arctic Monkeys</p>
+                        </div>
+                        <div class="back centered"><i class="fas fa-step-backward"></i></div>
+                        <div class="play centered"><i class="fas fa-play"></i></div>
+                        <div class="forward centered"><i class="fas fa-step-forward"></i></div>
+                    </div>
+                    <div class="app middle centered slack">
+                        <i class="fab fa-slack"></i>
+                    </div>
+                    <div class="app middle centered leo">
+                        <i class="fas fa-cat"></i>
+                    </div>
+                    <div class="app middle centered uber">
+                        <i class="fas fa-taxi"></i>
+                    </div>
+                    <div class="app middle centered bvg">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <div class="app middle centered whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="app middle centered facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="app middle centered twitter">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="app middle centered instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </article>
+                <div class="dots-container">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-                <div class="app middle centered slack">
-                    <i class="fab fa-slack"></i>
+                <article class="main-apps">
+                    <div class="small-app centered phone">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="small-app centered sms">
+                        <i class="far fa-comments"></i>
+                    </div>
+                    <div class="small-app centered camera">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="small-app centered firefox">
+                        <i class="fab fa-firefox"></i>
+                    </div>
+                    <div class="small-app centered gallery">
+                        <i class="fas fa-images"></i>
+                    </div>
+                </article>
+            </section> <!-- section.page-one -->
+            <section class="page-two">
+                <article class="top-apps">
+                    <div class="calendar">
+                    </div>
+                    <div class="app middle centered slack">
+                        <i class="fab fa-slack"></i>
+                    </div>
+                    <div class="app middle centered leo">
+                        <i class="fas fa-cat"></i>
+                    </div>
+                    <div class="app middle centered uber">
+                        <i class="fas fa-taxi"></i>
+                    </div>
+                    <div class="app middle centered bvg">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <div class="app middle centered whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="app middle centered facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="app middle centered twitter">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="app middle centered instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </article>
+                <div class="dots-container">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-                <div class="app middle centered leo">
-                    <i class="fas fa-cat"></i>
-                </div>
-                <div class="app middle centered uber">
-                    <i class="fas fa-taxi"></i>
-                </div>
-                <div class="app middle centered bvg">
-                    <i class="fas fa-subway"></i>
-                </div>
-                <div class="app middle centered whatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="app middle centered facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="app middle centered twitter">
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <div class="app middle centered instagram">
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </article>
-            <div id="dots-container">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <article id="main-apps">
-                <div class="small-app centered phone">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="small-app centered sms">
-                    <i class="far fa-comments"></i>
-                </div>
-                <div class="small-app centered camera">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <div class="small-app centered firefox">
-                    <i class="fab fa-firefox"></i>
-                </div>
-                <div class="small-app centered gallery">
-                    <i class="fas fa-images"></i>
-                </div>
-            </article>
+                <article class="main-apps">
+                    <div class="small-app centered phone">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="small-app centered sms">
+                        <i class="far fa-comments"></i>
+                    </div>
+                    <div class="small-app centered camera">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="small-app centered firefox">
+                        <i class="fab fa-firefox"></i>
+                    </div>
+                    <div class="small-app centered gallery">
+                        <i class="fas fa-images"></i>
+                    </div>
+                </article>
+            </section> <!-- section.page-two -->
         </section>
         <section id="bottom-case">
             <div class="menu-btn">
@@ -103,6 +163,27 @@
             </div>
         </section>
     </main>
+    <script>
+        let mySiema = new Siema({
+            selector: ".mySiema",
+        });
+
+        document.querySelector(".js-prev").addEventListener("click", function () {
+            mySiema.prev();
+        });
+
+        document.querySelector(".js-next").addEventListener("click", function () {
+            mySiema.next();
+        });
+
+        // lock button
+
+        // const pageOne = document.querySelector(".page-one");
+
+        // document.querySelector("#lock-btn").addEventListener("click", function () {
+        //     pageOne.style.background = "black";
+        // });
+    </script>
 </body>
 
 </html>
