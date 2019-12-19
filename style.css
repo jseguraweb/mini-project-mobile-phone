@@ -7,6 +7,7 @@
 body {
     width: 100%;
     padding: 1rem 0;
+    background-color: rgb(255, 249, 198);
 }
 
 /* TYPOGRAPHY */
@@ -37,6 +38,7 @@ html {
     border-radius: 20px;
     background-color: #000;
     margin: 0 auto;
+    position: relative;
 }
 
 #top-case,
@@ -44,6 +46,39 @@ html {
     width: 100%;
     height: 8vh;
     position: relative;
+}
+
+.lock-btn {
+    position: absolute;
+    right: -10px;
+    top: 180px;
+    width: 10px;
+    height: 4rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* z-index: -2; */
+    background-color: rgb(29, 29, 29);
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.volume-up-btn,
+.volume-down-btn {
+    position: absolute;
+    left: -10px;
+    top: 100px;
+    width: 10px;
+    height: 3rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    /* z-index: -2; */
+    background-color: rgb(29, 29, 29);
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.volume-down-btn {
+    top: 160px;
 }
 
 /* TOP-CASE */
@@ -107,7 +142,6 @@ html {
 .app {
     width: 80%;
     height: 60%;
-    /* border: 1px solid #000; */
     border-radius: 15px;
     margin: auto auto;
     position: relative;
@@ -123,7 +157,8 @@ html {
     position: absolute;
     bottom: -0.9rem;
     font-size: 0.7rem;
-    color: #000;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
 }
 
 .centered {
@@ -150,7 +185,7 @@ html {
     border: 1px solid #fff;
     border-radius: 50%;
     margin: 0 5px;
-    background-color: rgb(80, 80, 80);;
+    background-color: rgb(37, 37, 37);;
 }
 
 #main-apps {
@@ -169,11 +204,14 @@ html {
 
 .clock p {
     font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
 }
 
 .weather {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    color: #fff;
 }
 
 .temperature-container {
@@ -366,7 +404,8 @@ html {
     position: absolute;
     bottom: -0.9rem;
     font-size: 0.7rem;
-    color: #000;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
 }
 
 .small-app i {
