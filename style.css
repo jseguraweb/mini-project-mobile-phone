@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    padding: 1rem 0;
+}
+
 /* TYPOGRAPHY */
 
 html {
@@ -20,11 +25,76 @@ html {
     font-weight: 400;
 }
 
+/* CASE */
+
+#case {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 52vh;
+    height: auto;
+    padding: 1rem 1rem 0rem 1rem;
+    border-radius: 20px;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+#top-case,
+#bottom-case {
+    width: 100%;
+    height: 8vh;
+    position: relative;
+}
+
+/* TOP-CASE */
+
+#top-case {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.speaker {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgb(29, 29, 29);
+    border: 1px solid grey;
+    width: 70%;
+    height: 25%;
+    border-radius: 20px;
+    justify-self: center;
+    position: relative;
+    top: 5px;
+}
+
+.brand-name {
+    grid-column: 2;
+    grid-row: 2;
+    color: grey;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cam {
+    grid-column: 3;
+    grid-row: 1;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(29, 29, 29);
+    border: 2px solid grey;
+    justify-self: center;
+    position: relative;
+    top: 5px;
+}
+
+
 /* DISPLAY */
 
 #display {
     width: 50vh;
-    height: 80vh;
+    height: 75vh;
     border: 1px solid #000;
     display: grid;
     grid-template-rows: 80% 5% 15%;
@@ -357,3 +427,36 @@ html {
 .gallery::after {
     content: "Gallery";
 }
+
+/* BOTTOM-CASE */
+
+#bottom-case {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-btn {
+    color: grey;
+    grid-column: 1;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.6rem;
+}
+
+.main-btn {
+    background-color: rgb(29, 29, 29);
+    border: 1px solid grey;
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.undo-btn {
+    color: grey;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.6rem;
+}
+
