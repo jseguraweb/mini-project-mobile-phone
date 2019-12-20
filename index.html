@@ -35,7 +35,8 @@
         <section id="insert-pin">
             <form action="">
                 <label for="user-pin">Insert your PIN</label>
-                <input type="password" id="user-pin" name="user-pin">
+                <input type="password" id="user-pin" name="user-pin" required>
+                <input id="submit-pin" type="submit" value="OK">
             </form>
         </section>
         <section id="display" class="siema mySiema">
@@ -233,20 +234,41 @@
             mySiema.next();
         });
 
-        // lock button
+        // lock/unlock button
 
         const lockedDisplay = document.querySelector("#locked-display");
         const display = document.querySelector("#display");
+        const insertPin = document.querySelector("#insert-pin");
+        const pin = document.querySelector("#user-pin");
 
         document.querySelector("#lock-btn").addEventListener("click", function () {
             if (lockedDisplay.style.display === "flex") {
                 lockedDisplay.style.display = "none";
-                display.style.display = "block";
-            } else {
+                insertPin.style.display = "flex";
+                display.style.display = "none";
+            } else if (insertPin.style.display === "flex") {
+                false;
+            }
+            else {
                 lockedDisplay.style.display = "flex";
                 display.style.display = "none";
             }
         });
+
+        // insert pin
+
+        const validatePIN = "1234";
+
+        document.querySelector("#submit-pin").addEventListener("click", function (e) {
+            if (pin.value === validatePIN) {
+                insertPin.style.display = "none";
+                display.style.display = "block";
+            } else {
+                false;
+            }
+            e.preventDefault();
+        });
+
     </script>
 </body>
 
