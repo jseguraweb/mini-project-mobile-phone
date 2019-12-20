@@ -83,3 +83,36 @@ gallery
 spotify
 
 `<i class="fab fa-spotify"></i>`
+
+paypal
+
+`<i class="fab fa-paypal"></i>`
+
+bank
+
+`<i class="fas fa-university"></i>`
+
+livescore
+
+`<i class="far fa-futbol"></i>`
+
+youtube
+
+`<i class="fab fa-youtube"></i>`
+
+drivenow
+
+`<i class="fas fa-car-side"></i>`
+
+calculator
+
+`<i class="fas fa-square-root-alt"></i>`
+
+notes
+
+`<i class="fas fa-clipboard"></i>`
+
+clock
+
+`<i class="far fa-clock"></i>`
+
