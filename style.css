@@ -818,3 +818,38 @@ form>label {
     content: "Alarm";
 }
 
+/* PIN CLUE */
+
+.pin-clue {
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+    top: 45%;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pin-clue::before {
+    content: "1234";
+    position: absolute;
+    background-color: yellow;
+    width: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    left: -5.5rem;
+}
+
+.pin-clue:active {
+    left: 5.5rem;
+    z-index: -3;
+}
