@@ -229,11 +229,18 @@
 
         // lock button
 
-        // const pageOne = document.querySelector(".page-one");
+        const lockedDisplay = document.querySelector("#locked-display");
+        const display = document.querySelector("#display");
 
-        // document.querySelector("#lock-btn").addEventListener("click", function () {
-        //     pageOne.style.background = "black";
-        // });
+        document.querySelector("#lock-btn").addEventListener("click", function () {
+            if (lockedDisplay.style.display === "flex") {
+                lockedDisplay.style.display = "none";
+                display.style.display = "block";
+            } else {
+                lockedDisplay.style.display = "flex";
+                display.style.display = "none";
+            }
+        });
     </script>
 </body>
 
