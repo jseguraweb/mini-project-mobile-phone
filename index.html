@@ -38,6 +38,9 @@
                 <input type="password" id="user-pin" name="user-pin" required>
                 <input id="submit-pin" type="submit" value="OK">
             </form>
+            <div id="pop-up">
+                <p>PIN is incorrect!</p>
+            </div>
         </section>
         <section id="display" class="siema mySiema">
             <section class="page-one">
@@ -255,19 +258,33 @@
             }
         });
 
+        lockedDisplay.addEventListener("click", function () {
+            lockedDisplay.style.display = "none";
+            insertPin.style.display = "flex";
+        });
+
         // insert pin
 
         const validatePIN = "1234";
+        const popUp = document.querySelector("#pop-up");
+
+        pin.addEventListener("click", function () {
+            pin.value = "";
+        })
 
         document.querySelector("#submit-pin").addEventListener("click", function (e) {
             if (pin.value === validatePIN) {
                 insertPin.style.display = "none";
                 display.style.display = "block";
             } else {
-                false;
+                popUp.style.display = "flex";
             }
             e.preventDefault();
         });
+
+        popUp.addEventListener("click", function () {
+            popUp.style.display = "none";
+        })
 
     </script>
 </body>
