@@ -267,15 +267,27 @@
 
         const validatePIN = "1234";
         const popUp = document.querySelector("#pop-up");
+        const submitButton = document.querySelector("#submit-pin");
 
         pin.addEventListener("click", function () {
             pin.value = "";
+            pin.style.backgroundColor = "#fff";
         })
 
-        document.querySelector("#submit-pin").addEventListener("click", function (e) {
+        submitButton.addEventListener("click", function (e) {
             if (pin.value === validatePIN) {
                 insertPin.style.display = "none";
                 display.style.display = "block";
+            } else if (pin.value.length < 4) {
+                pin.animate([
+                    {transform: 'translateX(-3px)'},
+                    {transform: 'translateX(3px)'},
+                    {transform: 'translateX(-3px)'},
+                    {transform: 'translateX(3px)'}
+                ], {
+                    duration: 200,
+                    iterations: 1
+                });
             } else {
                 popUp.style.display = "flex";
             }
@@ -284,7 +296,7 @@
 
         popUp.addEventListener("click", function () {
             popUp.style.display = "none";
-        })
+        });
 
     </script>
 </body>
