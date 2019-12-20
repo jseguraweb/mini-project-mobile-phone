@@ -116,3 +116,7 @@ clock
 
 `<i class="far fa-clock"></i>`
 
+battery
+
+`<i class="fas fa-battery-three-quarters"></i>`
+
