@@ -223,8 +223,8 @@
         </section>
     </main> <!-- main#case -->
     <div class="pin-clue">
-        <p>click
-            <br>for PIN</p>
+        <p>PIN
+            <br>code</p>
     </div>
     <script>
         let mySiema = new Siema({
@@ -323,6 +323,21 @@
 
         popUp.addEventListener("click", function () {
             popUp.style.display = "none";
+        });
+
+        // PIN CODE
+
+        const pinClue = document.querySelector(".pin-clue");
+        pinClue.addEventListener("click", function () {
+            pinClue.animate([
+                {transform: 'translateX(-1px)'},
+                {transform: 'rotateX(-10px)'},
+                {transform: 'rotateY(180deg)'}
+            ], {
+                duration: 150,
+                iterations: 1
+            });
+            pinClue.firstElementChild.innerHTML = "1234";
         });
 
     </script>
