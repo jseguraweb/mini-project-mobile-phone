@@ -28,7 +28,7 @@
             <div class="cam"></div>
         </section>
         <section id="locked-display">
-            <p>15:21</p>
+            <p id="locked-display-time"></p>
             <p>TH., 25.DEC</p>
             <p><i class="fas fa-battery-three-quarters"></i> 85%</p>
         </section>
@@ -45,8 +45,7 @@
         <section id="display" class="siema mySiema">
             <section class="page-one">
                 <article class="top-apps">
-                    <div class="app centered clock">
-                        <p>15:21</p>
+                    <div id="display-time" class="app centered clock">
                     </div>
                     <div class="app weather">
                         <div class="temperature-container">
@@ -89,7 +88,7 @@
                     <div class="app middle centered instagram">
                         <i class="fab fa-instagram"></i>
                     </div>
-                </article> <!-- artcile.top-apps -->
+                </article> <!-- article.top-apps -->
                 <div class="dots-container">
                     <div class="dot"></div>
                     <div class="dot"></div>
@@ -240,6 +239,31 @@
         document.querySelector(".js-next").addEventListener("click", function () {
             mySiema.next();
         });
+
+        // time
+
+        const checkTime = i => {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        };
+
+        const startTime = () => {
+            var today = new Date();
+            var hrs = today.getHours();
+            var min = today.getMinutes();
+            // add a zero in front of numbers<10
+            hrs = checkTime(hrs);
+            min = checkTime(min);
+            document.getElementById("display-time").innerHTML = hrs + ":" + min;
+            document.getElementById("locked-display-time").innerHTML = hrs + ":" + min;
+            setTimeout(function () {
+                startTime()
+            }, 500);
+        };
+
+        startTime();
 
         // lock/unlock button
 
