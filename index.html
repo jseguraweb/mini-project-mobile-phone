@@ -325,19 +325,32 @@
             popUp.style.display = "none";
         });
 
-        // PIN CODE
+        // PIN CODE COIN
 
         const pinClue = document.querySelector(".pin-clue");
         pinClue.addEventListener("click", function () {
-            pinClue.animate([
-                {transform: 'translateX(-1px)'},
-                {transform: 'rotateX(-10px)'},
-                {transform: 'rotateY(180deg)'}
-            ], {
-                duration: 150,
-                iterations: 1
-            });
-            pinClue.firstElementChild.innerHTML = "1234";
+
+            if (pinClue.firstElementChild.innerHTML !== "1234") {
+                pinClue.animate([
+                    {transform: 'rotate3d(1, 1, 0, 0deg)'},
+                    {transform: 'rotate3d(1, 1, 0, -180deg)'},
+                    {transform: 'rotate3d(1, 1, 0, -360deg)'}
+                ], {
+                    duration: 150,
+                    iterations: 1
+                });
+                pinClue.firstElementChild.innerHTML = "1234";
+            } else {
+                pinClue.animate([
+                    {transform: 'rotate3d(1, 1, 0, 0deg)'},
+                    {transform: 'rotate3d(1, 1, 0, -180deg)'},
+                    {transform: 'rotate3d(1, 1, 0, -360deg)'}
+                ], {
+                    duration: 200,
+                    iterations: 1
+                });
+                pinClue.firstElementChild.innerHTML = "PIN <br>code";
+            }
         });
 
     </script>
