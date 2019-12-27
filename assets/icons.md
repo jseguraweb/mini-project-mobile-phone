@@ -8,6 +8,10 @@ play
 
 `<i class="fas fa-play"></i>`
 
+pause
+
+`<i class="fas fa-pause"></i>`
+
 step-backward
 
 `<i class="fas fa-step-backward"></i>`

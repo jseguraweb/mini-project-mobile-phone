@@ -54,14 +54,8 @@
                         <p class="city">Berlin</p>
                     </div>
                     <div class="app spotify">
-                        <div class="album-pic"></div>
-                        <div class="title">
-                            <p class="song">Crying Lightning</p>
-                            <p class="band">Arctic Monkeys</p>
-                        </div>
-                        <div class="back centered"><i class="fas fa-step-backward"></i></div>
-                        <div class="play centered"><i class="fas fa-play"></i></div>
-                        <div class="forward centered"><i class="fas fa-step-forward"></i></div>
+                        <iframe src="https://open.spotify.com/embed/album/5IEoiwkThhRmSMBANhpxl2" width="280"
+                            height="180" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
                     <div class="app middle centered slack">
                         <i class="fab fa-slack"></i>
@@ -352,6 +346,27 @@
                 pinClue.firstElementChild.innerHTML = "PIN <br>code";
             }
         });
+
+        // MUSIC PLAYER
+
+        const playButton = document.querySelector(".play");
+        playButton.addEventListener("click", function () {
+            document.querySelector("#player").play();
+            if (playButton.innerHTML === `<i class="fas fa-play"></i>`) {
+                playButton.innerHTML = `<i class="fas fa-pause"></i>`;
+            } else {
+                playButton.innerHTML = `<i class="fas fa-play"></i>`;
+            }
+        });
+
+        const backButton = document.querySelector(".back");
+        playButton.addEventListener("click", function () {
+            document.querySelector("#player").play();
+        });
+
+        //     <button onclick="document.getElementById('player').pause()">Pause</button>
+        //     <button onclick="document.getElementById('player').volume += 0.1">Vol +</button>
+        //     <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
 
     </script>
 </body>
