@@ -124,3 +124,11 @@ battery
 
 `<i class="fas fa-battery-three-quarters"></i>`
 
+wifi
+
+`<i class="fas fa-wifi"></i>`
+
+speaker
+
+`<i class="fas fa-volume-down"></i>`
+
