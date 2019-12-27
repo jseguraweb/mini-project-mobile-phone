@@ -148,12 +148,29 @@ html {
     margin: 0.5rem 0;
 }
 
+#pop-up-battery {
+    width: 50vh;
+    height: 75vh;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgba(141, 40, 40, 0.425);
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
+
+
+
 /* INSERT PASSWORD */
 
 #insert-pin {
     width: 50vh;
     height: 75vh;
-    background-image: url("assets/img/joker.jpg");
+    background-image: url("https://source.unsplash.com/random");
+    /* background-image: url("assets/img/joker.jpg"); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -216,7 +233,7 @@ form>label {
     transition-duration: 0.2s;
 }
 
-#pop-up {
+#pop-up-pin {
     width: 100%;
     height: 100%;
     font-size: 1.8rem;
@@ -274,8 +291,27 @@ form>label {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
+    font-weight: 600;
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+
+.top-features-bar div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-features-bar div:nth-child(2) i,
+.top-features-bar div:nth-child(2) p {
+    margin-left: 5px;
+}
+
+.bat {
+    display: flex;
+}
+
+.bat i {
+    margin-left: 5px;
 }
 
 /* PAGE 1 */
@@ -286,7 +322,6 @@ form>label {
     display: grid;
     grid-template-rows: 3% 77% 5% 15%;
     padding: 0.5rem;
-    background-color: rgb(138, 138, 138);
     background-image: url("https://source.unsplash.com/random/");
     /* background-image: url("assets/img/joker.jpg"); */
     background-repeat: no-repeat;
@@ -678,7 +713,7 @@ form>label {
     align-self: center;
     justify-self: center;
     width: 80%;
-    padding: 0.15rem;
+    padding: 0.1rem;
     text-align: center;
 }
 
@@ -824,3 +859,17 @@ form>label {
     transform: rotate(-10deg);
 }
 
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

@@ -10,6 +10,7 @@
     <script src="assets/siema-master/docs/assets/siema.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <title>Mobile Phone</title>
 </head>
 
@@ -29,7 +30,10 @@
         <section id="locked-display">
             <p id="locked-display-time"></p>
             <p>TH., 25.DEC</p>
-            <p><i class="fas fa-battery-three-quarters"></i> 85%</p>
+            <div class="bat">
+                <p id="battery-locked-display"></p><span class="percent">%</span><i
+                    class="fas fa-battery-three-quarters"></i>
+            </div>
         </section>
         <section id="insert-pin">
             <form action="">
@@ -37,10 +41,15 @@
                 <input type="password" id="user-pin" name="user-pin" required>
                 <input id="submit-pin" type="submit" value="OK">
             </form>
-            <div id="pop-up">
+            <div id="pop-up-pin">
                 <p>PIN is incorrect!</p>
             </div>
         </section>
+        <div id="pop-up-battery">
+            <p class="blink">LOW BATTERY
+                <br>please refresh
+            </p>
+        </div>
         <section id="display" class="siema mySiema">
             <section class="page-one">
                 <article class="top-features-bar">
@@ -49,8 +58,10 @@
                     <div>
                         <i class="fas fa-volume-down"></i>
                         <i class="fas fa-wifi"></i>
-                        <span>85%</span>
-                        <i class="fas fa-battery-three-quarters"></i>
+                        <div class="bat">
+                            <p class="battery"></p><span class="percent">%</span><i
+                                class="fas fa-battery-three-quarters"></i>
+                        </div>
                     </div>
                 </article>
                 <article class="top-apps">
@@ -123,8 +134,11 @@
                     <div>
                         <i class="fas fa-volume-down"></i>
                         <i class="fas fa-wifi"></i>
-                        <span>85%</span>
-                        <i class="fas fa-battery-three-quarters"></i>
+                        <div class="bat">
+                            <p class="battery"></p>
+                            <span class="percent">%</span>
+                            <i class="fas fa-battery-three-quarters"></i>
+                        </div>
                     </div>
                 </article>
                 <article class="top-apps">
@@ -284,8 +298,8 @@
         const display = document.querySelector("#display");
         const insertPin = document.querySelector("#insert-pin");
         const pin = document.querySelector("#user-pin");
-
-        document.querySelector("#lock-btn").addEventListener("click", function () {
+        const lockButton = document.querySelector("#lock-btn");
+        const lockDevice = () => {
             if (lockedDisplay.style.display === "flex") {
                 lockedDisplay.style.display = "none";
                 insertPin.style.display = "flex";
@@ -297,7 +311,10 @@
                 lockedDisplay.style.display = "flex";
                 display.style.display = "none";
             }
-        });
+        };
+
+
+        lockButton.addEventListener("click", lockDevice);
 
         lockedDisplay.addEventListener("click", function () {
             lockedDisplay.style.display = "none";
@@ -307,7 +324,7 @@
         // insert pin
 
         const validatePIN = "1234";
-        const popUp = document.querySelector("#pop-up");
+        const popUp = document.querySelector("#pop-up-pin");
         const submitButton = document.querySelector("#submit-pin");
 
         pin.addEventListener("click", function () {
@@ -367,26 +384,28 @@
             }
         });
 
-        // MUSIC PLAYER
+        // BATTERY
 
-        const playButton = document.querySelector(".play");
-        playButton.addEventListener("click", function () {
-            document.querySelector("#player").play();
-            if (playButton.innerHTML === `<i class="fas fa-play"></i>`) {
-                playButton.innerHTML = `<i class="fas fa-pause"></i>`;
-            } else {
-                playButton.innerHTML = `<i class="fas fa-play"></i>`;
+        const batteryTop = document.querySelectorAll(".battery");
+        const batteryLockedDisplay = document.querySelector("#battery-locked-display");
+        const lowBatteryPopUp = document.querySelector("#pop-up-battery");
+        batteryTop[0].innerHTML = "100";
+        batteryTop[1].innerHTML = "100";
+        batteryLockedDisplay.innerHTML = "100";
+        setInterval(function () {
+            batteryLockedDisplay.innerHTML -= 1;
+            batteryTop[0].innerHTML -= 1;
+            batteryTop[1].innerHTML -= 1;
+            if (batteryLockedDisplay.innerHTML < 1 && batteryTop[0].innerHTML < 1 && batteryTop[1].innerHTML < 1) {
+                batteryLockedDisplay.innerHTML = "0"
+                lockedDisplay.style.display = "none";
+                display.style.display = "none";
+                insertPin.style.display = "none";
+                lowBatteryPopUp.style.display = "flex";
+                lockButton.removeEventListener("click", lockDevice);
             }
-        });
+        }, 100);
 
-        const backButton = document.querySelector(".back");
-        playButton.addEventListener("click", function () {
-            document.querySelector("#player").play();
-        });
-
-        //     <button onclick="document.getElementById('player').pause()">Pause</button>
-        //     <button onclick="document.getElementById('player').volume += 0.1">Vol +</button>
-        //     <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
 
     </script>
 </body>
