@@ -286,8 +286,8 @@ form>label {
 }
 
 .app {
-    width: 80%;
-    height: 60%;
+    width: 70%;
+    height: 55%;
     border-radius: 15px;
     margin: auto auto;
     position: relative;
@@ -498,8 +498,8 @@ form>label {
 /* MAIN APPS */
 
 .small-app {
-    width: 90%;
-    height: 70%;
+    width: 85%;
+    height: 65%;
     border-radius: 15px;
     margin: 0.3rem auto 0 auto;
     position: relative;
@@ -615,7 +615,8 @@ form>label {
     display: grid;
     grid-template-rows: 80% 5% 15%;
     padding: 0.5rem;
-    background-image: url("assets/img/joker.jpg");
+    background-image: url("https://source.unsplash.com/random/");
+    /* background-image: url("assets/img/joker.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
