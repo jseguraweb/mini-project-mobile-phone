@@ -120,9 +120,25 @@ clock
 
 `<i class="far fa-clock"></i>`
 
-battery
+battery full
+
+`<i class="fas fa-battery-full"></i>`
+
+battery 3/4
 
 `<i class="fas fa-battery-three-quarters"></i>`
+
+battery 1/2
+
+`<i class="fas fa-battery-half"></i>`
+
+battery 1/4
+
+`<i class="fas fa-battery-quarter"></i>`
+
+battery empty
+
+`<i class="fas fa-battery-empty"></i>`
 
 wifi
 

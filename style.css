@@ -862,6 +862,8 @@ form>label {
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  text-align: center;
+  line-height: 1.5;
 }
 @keyframes blink-animation {
   to {

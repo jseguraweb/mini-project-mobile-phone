@@ -31,8 +31,7 @@
             <p id="locked-display-time"></p>
             <p>TH., 25.DEC</p>
             <div class="bat">
-                <p id="battery-locked-display"></p><span class="percent">%</span><i
-                    class="fas fa-battery-three-quarters"></i>
+                <p id="battery-locked-display"></p><span class="percent">%</span><i class="fas fa-battery-full"></i>
             </div>
         </section>
         <section id="insert-pin">
@@ -48,6 +47,7 @@
         <div id="pop-up-battery">
             <p class="blink">LOW BATTERY
                 <br>please refresh
+                <br><i class="fas fa-battery-empty"></i>
             </p>
         </div>
         <section id="display" class="siema mySiema">
@@ -59,8 +59,7 @@
                         <i class="fas fa-volume-down"></i>
                         <i class="fas fa-wifi"></i>
                         <div class="bat">
-                            <p class="battery"></p><span class="percent">%</span><i
-                                class="fas fa-battery-three-quarters"></i>
+                            <p class="battery"></p><span class="percent">%</span><i class="fas fa-battery-full"></i>
                         </div>
                     </div>
                 </article>
@@ -75,8 +74,9 @@
                         <p class="city">Berlin</p>
                     </div>
                     <div class="app spotify">
-                        <iframe src="https://open.spotify.com/embed/album/5IEoiwkThhRmSMBANhpxl2" width="280"
-                            height="180" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe id="music-player" src="https://open.spotify.com/embed/album/5IEoiwkThhRmSMBANhpxl2"
+                            width="280" height="180" frameborder="0" allowtransparency="true"
+                            allow="encrypted-media"></iframe>
                     </div>
                     <div class="app middle centered slack">
                         <i class="fab fa-slack"></i>
@@ -137,7 +137,7 @@
                         <div class="bat">
                             <p class="battery"></p>
                             <span class="percent">%</span>
-                            <i class="fas fa-battery-three-quarters"></i>
+                            <i class="fas fa-battery-full"></i>
                         </div>
                     </div>
                 </article>
@@ -396,6 +396,7 @@
             batteryLockedDisplay.innerHTML -= 1;
             batteryTop[0].innerHTML -= 1;
             batteryTop[1].innerHTML -= 1;
+
             if (batteryLockedDisplay.innerHTML < 1 && batteryTop[0].innerHTML < 1 && batteryTop[1].innerHTML < 1) {
                 batteryLockedDisplay.innerHTML = "0"
                 lockedDisplay.style.display = "none";
@@ -404,7 +405,19 @@
                 lowBatteryPopUp.style.display = "flex";
                 lockButton.removeEventListener("click", lockDevice);
             }
-        }, 100);
+            if (batteryLockedDisplay.innerHTML < 30 && batteryTop[0].innerHTML < 30 && batteryTop[1].innerHTML < 30) {
+                document.querySelectorAll(".fa-battery-half")[0].classList.add("fa-battery-quarter");
+                document.querySelectorAll(".fa-battery-half")[0].classList.remove("fa-battery-half");
+            }
+            if (batteryLockedDisplay.innerHTML < 55 && batteryTop[0].innerHTML < 55 && batteryTop[1].innerHTML < 55) {
+                document.querySelectorAll(".fa-battery-three-quarters")[0].classList.add("fa-battery-half");
+                document.querySelectorAll(".fa-battery-three-quarters")[0].classList.remove("fa-battery-three-quarters");
+            }
+            if (batteryLockedDisplay.innerHTML < 80 && batteryTop[0].innerHTML < 80 && batteryTop[1].innerHTML < 80) {
+                document.querySelectorAll(".fa-battery-full")[0].classList.add("fa-battery-three-quarters");
+                document.querySelectorAll(".fa-battery-full")[0].classList.remove("fa-battery-full");
+            }
+        }, 1500);
 
 
     </script>
