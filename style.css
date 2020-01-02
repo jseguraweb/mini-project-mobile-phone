@@ -64,8 +64,8 @@ html {
     cursor: pointer;
 }
 
-.volume-up-btn,
-.volume-down-btn {
+.background-up-btn,
+.background-down-btn {
     position: absolute;
     left: -10px;
     top: 100px;
@@ -78,16 +78,22 @@ html {
     cursor: pointer;
 }
 
-.volume-down-btn {
+.background-down-btn {
     top: 160px;
+}
+
+/* DISPLAY BACKGROUND */
+
+.background-image {
+    /* background-image: url("assets/img/backgrounds/picture2.jpg"); */
 }
 
 /* TOP-CASE */
 
 #top-case {
     display: grid;
-    grid-template-columns: repeat(2.5, 1fr);
-    grid-template-rows: repeat(2, 12.5r);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .speaker {
@@ -162,15 +168,12 @@ html {
     z-index: 3000;
 }
 
-
-
 /* INSERT PASSWORD */
 
 #insert-pin {
     width: 50vh;
     height: 75vh;
-    background-image: url("https://source.unsplash.com/random");
-    /* background-image: url("assets/img/joker.jpg"); */
+    /* background-image: url("https://source.unsplash.com/random"); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -322,8 +325,7 @@ form>label {
     display: grid;
     grid-template-rows: 3% 77% 5% 15%;
     padding: 0.5rem;
-    background-image: url("https://source.unsplash.com/random/");
-    /* background-image: url("assets/img/joker.jpg"); */
+    /* background-image: url("https://source.unsplash.com/random/"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -659,8 +661,7 @@ form>label {
     display: grid;
     grid-template-rows: 5% 75% 5% 15%;
     padding: 0.5rem;
-    background-image: url("https://source.unsplash.com/random/");
-    /* background-image: url("assets/img/joker.jpg"); */
+    /* background-image: url("https://source.unsplash.com/random/"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -20,8 +20,8 @@
 
     <main id="case">
         <div id="lock-btn"></div>
-        <div class="volume-up-btn"></div>
-        <div class="volume-down-btn"></div>
+        <div class="background-up-btn"></div>
+        <div class="background-down-btn"></div>
         <section id="top-case">
             <div class="speaker"></div>
             <p class="brand-name">SAMSUNG</p>
@@ -34,7 +34,7 @@
                 <p id="battery-locked-display"></p><span class="percent">%</span><i class="fas fa-battery-full"></i>
             </div>
         </section>
-        <section id="insert-pin">
+        <section id="insert-pin" class="background-image">
             <form action="">
                 <label for="user-pin">Insert your PIN</label>
                 <input type="password" id="user-pin" name="user-pin" required>
@@ -51,7 +51,7 @@
             </p>
         </div>
         <section id="display" class="siema mySiema">
-            <section class="page-one">
+            <section class="page-one background-image">
                 <article class="top-features-bar">
                     <div><span>Simply</span>
                     </div>
@@ -127,7 +127,7 @@
                     </div>
                 </article> <!-- article.main-apps -->
             </section> <!-- section.page-one -->
-            <section class="page-two">
+            <section class="page-two background-image">
                 <article class="top-features-bar">
                     <div><span>Simply</span>
                     </div>
@@ -418,6 +418,41 @@
                 document.querySelectorAll(".fa-battery-full")[0].classList.remove("fa-battery-full");
             }
         }, 15000);
+
+        // BACKGROUNDS
+
+        const backgroundImages = ["url('assets/img/backgrounds/picture1.jpg')",
+            "url('assets/img/backgrounds/picture2.jpg')",
+            "url('assets/img/backgrounds/picture3.jpg')",
+            "url('assets/img/backgrounds/picture4.jpg')",
+            "url('assets/img/backgrounds/picture5.jpg')",
+            "url('assets/img/backgrounds/picture6.jpg')",
+            "url('assets/img/backgrounds/picture7.jpg')",
+            "url('assets/img/backgrounds/picture8.jpg')",
+            "url('assets/img/backgrounds/picture9.jpg')",
+            "url('assets/img/backgrounds/picture10.jpg')"];
+        const displayBackground = document.querySelectorAll(".background-image");
+        const backgroundUp = document.querySelector(".background-up-btn");
+        const backgroundDown = document.querySelector(".background-down-btn");
+        displayBackground[0].style.backgroundImage = backgroundImages[0];
+        displayBackground[1].style.backgroundImage = backgroundImages[0];
+        displayBackground[2].style.backgroundImage = backgroundImages[0];
+
+        let i = 0;
+        backgroundUp.addEventListener("click", function () {
+            displayBackground[0].style.backgroundImage = backgroundImages[i += 1];
+            i -= 1;
+            displayBackground[1].style.backgroundImage = backgroundImages[i += 1];
+            i -= 1;
+            displayBackground[2].style.backgroundImage = backgroundImages[i += 1];
+        });
+        backgroundDown.addEventListener("click", function () {
+            displayBackground[0].style.backgroundImage = backgroundImages[i -= 1];
+            i += 1;
+            displayBackground[1].style.backgroundImage = backgroundImages[i -= 1];
+            i += 1;
+            displayBackground[2].style.backgroundImage = backgroundImages[i -= 1];
+        });
 
 
     </script>
