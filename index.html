@@ -428,7 +428,7 @@
         }
 
         const changeBackgroundDown = () => {
-            if (image >= 0) {
+            if (image > 0) {
                 displayBackground[0].style.backgroundImage = backgroundImages[image -= 1];
                 image += 1;
                 displayBackground[1].style.backgroundImage = backgroundImages[image -= 1];
@@ -436,15 +436,13 @@
                 displayBackground[2].style.backgroundImage = backgroundImages[image -= 1];
             } else {
                 displayBackground[0].style.backgroundImage = backgroundImages[0];
-                image += 1;
                 displayBackground[1].style.backgroundImage = backgroundImages[0];
-                image += 1;
                 displayBackground[2].style.backgroundImage = backgroundImages[0];
             }
         };
 
         const changeBackgroundUp = () => {
-            if (image <= 9) {
+            if (image < 9) {
                 displayBackground[0].style.backgroundImage = backgroundImages[image += 1];
                 image -= 1;
                 displayBackground[1].style.backgroundImage = backgroundImages[image += 1];
@@ -452,9 +450,7 @@
                 displayBackground[2].style.backgroundImage = backgroundImages[image += 1];
             } else {
                 displayBackground[0].style.backgroundImage = backgroundImages[9];
-                image -= 1;
                 displayBackground[1].style.backgroundImage = backgroundImages[9];
-                image -= 1;
                 displayBackground[2].style.backgroundImage = backgroundImages[9];
             }
         };
