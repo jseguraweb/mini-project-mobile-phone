@@ -292,6 +292,64 @@
 
         startTime();
 
+        // BACKGROUNDS
+
+        const backgroundImages = ["url('assets/img/backgrounds/picture1.jpg')",
+            "url('assets/img/backgrounds/picture2.jpg')",
+            "url('assets/img/backgrounds/picture3.jpg')",
+            "url('assets/img/backgrounds/picture4.jpg')",
+            "url('assets/img/backgrounds/picture5.jpg')",
+            "url('assets/img/backgrounds/picture6.jpg')",
+            "url('assets/img/backgrounds/picture7.jpg')",
+            "url('assets/img/backgrounds/picture8.jpg')",
+            "url('assets/img/backgrounds/picture9.jpg')",
+            "url('assets/img/backgrounds/picture10.jpg')"];
+        const displayBackground = document.querySelectorAll(".background-image");
+        const backgroundUp = document.querySelector(".background-up-btn");
+        const backgroundDown = document.querySelector(".background-down-btn");
+
+        let image;
+
+        for (let j = 0; j < 3; j++) {
+            image = 0;
+            displayBackground[j].style.backgroundImage = backgroundImages[image];
+        }
+
+        const changeBackgroundDown = () => {
+            if (image >= 0) {
+                displayBackground[0].style.backgroundImage = backgroundImages[image -= 1];
+                image += 1;
+                displayBackground[1].style.backgroundImage = backgroundImages[image -= 1];
+                image += 1;
+                displayBackground[2].style.backgroundImage = backgroundImages[image -= 1];
+            } else {
+                displayBackground[0].style.backgroundImage = backgroundImages[0];
+                image += 1;
+                displayBackground[1].style.backgroundImage = backgroundImages[0];
+                image += 1;
+                displayBackground[2].style.backgroundImage = backgroundImages[0];
+            }
+        };
+
+        const changeBackgroundUp = () => {
+            if (image <= 9) {
+                displayBackground[0].style.backgroundImage = backgroundImages[image += 1];
+                image -= 1;
+                displayBackground[1].style.backgroundImage = backgroundImages[image += 1];
+                image -= 1;
+                displayBackground[2].style.backgroundImage = backgroundImages[image += 1];
+            } else {
+                displayBackground[0].style.backgroundImage = backgroundImages[9];
+                image -= 1;
+                displayBackground[1].style.backgroundImage = backgroundImages[9];
+                image -= 1;
+                displayBackground[2].style.backgroundImage = backgroundImages[9];
+            }
+        };
+
+        backgroundUp.addEventListener("click", changeBackgroundUp);
+        backgroundDown.addEventListener("click", changeBackgroundDown);
+
         // lock/unlock button
 
         const lockedDisplay = document.querySelector("#locked-display");
@@ -418,42 +476,6 @@
                 document.querySelectorAll(".fa-battery-full")[0].classList.remove("fa-battery-full");
             }
         }, 15000);
-
-        // BACKGROUNDS
-
-        const backgroundImages = ["url('assets/img/backgrounds/picture1.jpg')",
-            "url('assets/img/backgrounds/picture2.jpg')",
-            "url('assets/img/backgrounds/picture3.jpg')",
-            "url('assets/img/backgrounds/picture4.jpg')",
-            "url('assets/img/backgrounds/picture5.jpg')",
-            "url('assets/img/backgrounds/picture6.jpg')",
-            "url('assets/img/backgrounds/picture7.jpg')",
-            "url('assets/img/backgrounds/picture8.jpg')",
-            "url('assets/img/backgrounds/picture9.jpg')",
-            "url('assets/img/backgrounds/picture10.jpg')"];
-        const displayBackground = document.querySelectorAll(".background-image");
-        const backgroundUp = document.querySelector(".background-up-btn");
-        const backgroundDown = document.querySelector(".background-down-btn");
-        displayBackground[0].style.backgroundImage = backgroundImages[0];
-        displayBackground[1].style.backgroundImage = backgroundImages[0];
-        displayBackground[2].style.backgroundImage = backgroundImages[0];
-
-        let i = 0;
-        backgroundUp.addEventListener("click", function () {
-            displayBackground[0].style.backgroundImage = backgroundImages[i += 1];
-            i -= 1;
-            displayBackground[1].style.backgroundImage = backgroundImages[i += 1];
-            i -= 1;
-            displayBackground[2].style.backgroundImage = backgroundImages[i += 1];
-        });
-        backgroundDown.addEventListener("click", function () {
-            displayBackground[0].style.backgroundImage = backgroundImages[i -= 1];
-            i += 1;
-            displayBackground[1].style.backgroundImage = backgroundImages[i -= 1];
-            i += 1;
-            displayBackground[2].style.backgroundImage = backgroundImages[i -= 1];
-        });
-
 
     </script>
 </body>
