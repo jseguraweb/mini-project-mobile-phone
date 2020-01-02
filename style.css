@@ -339,7 +339,7 @@ form>label {
 }
 
 .middle i {
-    font-size: 2.2rem;
+    font-size: 5.5vh;
 }
 
 .app::after {
@@ -561,7 +561,7 @@ form>label {
 }
 
 .small-app i {
-    font-size: 1.8rem;
+    font-size: 5vh;
 }
 
 .phone {
@@ -706,7 +706,7 @@ form>label {
     width: 100%;
     height: 65%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-template-columns: repeat(7, minmax(40px, 1fr));
 }
 
 .days p {
