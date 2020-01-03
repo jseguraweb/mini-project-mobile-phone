@@ -833,6 +833,7 @@ form>label {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    font-size: 0.9em;
 }
 
 .uninstall-menu div {
@@ -841,6 +842,7 @@ form>label {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    font-size: 0.9em;
 }
 
 .uninstall-yes,
@@ -863,8 +865,8 @@ form>label {
     width: 125%;
     height: 225%;
     border-radius: 50%;
-    top: -13px;
-    left: -5px;
+    top: -9px;
+    left: -4px;
     border: 1px solid #19b5ee;
     z-index: 4;
 }
