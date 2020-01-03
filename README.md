@@ -48,16 +48,25 @@ This file will be edited at the time I'm working on this project
 
 12. Research time. Topic: Lightbox library (to scroll left-right the main display)
 
-    GOAL: present a mobile phone CSS-shape with a dinamic gallery
+    GOAL: present a mobile phone CSS-shape with a dynamic gallery
 
     (ESTIMATED TIME: 8 hours)
 
-## Time:
+## Time Estimation:
 
 - Starting date: 17 dec 2019
 - Estimated time: 24 hours of work
 - Available time: 25 hours of work
-- Final date: XX
+
+## Time invested
+
+- Final date: 03 jan 2020
+- Time invested: 32,5 hours
+
+### How did I invested all these hours?
+
+![](/assets/img/dashboard2.png)
+![](/assets/img/dashboard.png)
 
 ## New skills (to research):
 
@@ -66,16 +75,32 @@ This file will be edited at the time I'm working on this project
 
 ## Challenges + lessons learned:
 
-XXXXX
+- Using a library for the pictures carousel effect (Siema)
+https://pawelgrzybek.github.io/siema/
+
+- How to embed Spotify on your website
+https://www.jimdo.com/blog/embed-spotify-playlist-on-website/
+
+- How to create a countdown for the battery with **`setInterval()`**
+https://www.w3schools.com/jsref/met_win_setinterval.asp
+
+- How to display current time on the display
+https://www.geeksforgeeks.org/create-countdown-timer-using-javascript/
+
+- How to add and remove interaction with JS with different methods: **`querySelector`**, **`querySelectorAll`**, **`getElementByClassName`**, **`getElementById`**, **`addEventListener`** and **`removeEventListener`**
+https://www.udemy.com/course/modern-javascript-from-the-beginning/
+
+- How to animate elements in JS with **`Element.animate()`**
+https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
 
 ## Achievements: 
 
-XXXXX
+- Add options to each app by clicking on the icon
+- Add an option to change the background image of the mobile phone
+- Add an option to lock the mobile phone
+- Feature: listen to music in the Spotify App
 
 ## Ideas for the future:
 
-- Add options to each app by clicking on the icon
-- Add an option to change the background image of the mobile phone
-- Add an option to lock the mobile pone
-- Feature: listen to music in the Spotify App
-- Feature: Add data in a calendar
+- Add a real functional calendar
+- Add more animations to every interaction
