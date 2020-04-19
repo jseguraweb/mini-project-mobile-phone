@@ -1,12 +1,14 @@
-# MINI-SOLO PROJECT DCI
+# <a href="https://jseguraweb.github.io/mini-project-mobile-phone/">Clone of a smartphone</a>
 
-## Description:
+![](/screenshot.png)
+
+> ## Description:
 
 CSS-Art Project: drawing a mobile phone using HTML and CSS. Try with animations and maybe JS to make it interactive.
 
 This file will be edited at the time I'm working on this project
 
-## Details:
+> ## Details:
 
 - It's about practicing. The intended user and the client is going to be me. 
 - Goal: include it in my portfolio.
@@ -15,7 +17,7 @@ This file will be edited at the time I'm working on this project
     - Background images for the device
     - Short texts (app names, mobile phone's brand)
 
-## Priorities:
+> ## Priorities:
 
 \* Sign up in ***toggl*** to track my working time and tasks
 
@@ -52,28 +54,28 @@ This file will be edited at the time I'm working on this project
 
     (ESTIMATED TIME: 8 hours)
 
-## Time Estimation:
+> ## Time Estimation:
 
 - Starting date: 17 dec 2019
 - Estimated time: 24 hours of work
 - Available time: 25 hours of work
 
-## Time invested
+> ## Time invested
 
 - Final date: 03 jan 2020
 - Time invested: 32,5 hours
 
-### How did I invested all these hours?
+> ### How did I invested all these hours?
 
 ![](/assets/img/dashboard2.png)
 ![](/assets/img/dashboard.png)
 
-## New skills (to research):
+> ## New skills (to research):
 
 - Keyframes
 - Lightbox library
 
-## Challenges + lessons learned:
+> ## Challenges + lessons learned:
 
 - Using a library for the pictures carousel effect (Siema)
 https://pawelgrzybek.github.io/siema/
@@ -93,14 +95,14 @@ https://www.udemy.com/course/modern-javascript-from-the-beginning/
 - How to animate elements in JS with **`Element.animate()`**
 https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
 
-## Achievements: 
+> ## Achievements: 
 
 - Add options to each app by clicking on the icon
 - Add an option to change the background image of the mobile phone
 - Add an option to lock the mobile phone
 - Feature: listen to music in the Spotify App
 
-## Ideas for the future:
+> ## Ideas for the future:
 
 - Add a real functional calendar
 - Add more animations to every interaction
